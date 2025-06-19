@@ -92,14 +92,6 @@ Install dependencies via:
 ```bash
 pip install -r requirements.txt
 ```
-
-Example `requirements.txt`:
-
-```text
-requests
-rich
-```
-
 ---
 
 ## 📊 Report Example
