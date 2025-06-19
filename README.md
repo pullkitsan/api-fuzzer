@@ -44,6 +44,12 @@ pip install -r requirements.txt
 python api_fuzzer.py --swagger-file openapi.json --base-url http://localhost:5000
 ```
 
+### Dry run - Shows the parsed endpoints from api spec file 
+
+```bash
+python api_fuzzer.py --swagger-file openapi.json --base-url http://localhost:5000 --dry-run
+```
+
 #### CLI Manual Mode
 
 ```bash
@@ -82,6 +88,7 @@ python api_fuzzer.py \
 | `--save-request`      | Save all requests to file |
 | `--save-response`     | Save all responses to file |
 | `--report`            | Generate HTML report |
+| `--dry-run`           | Shows parsed api endpoints with parameters to fuzz |
 
 ---
 
