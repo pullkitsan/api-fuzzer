@@ -64,7 +64,7 @@ python api_fuzzer.py \
   --proxy http://127.0.0.1:8080 \
   --auth-header "Bearer <token>" \
   --include-regex "admin|token" \
-  --report results/report.html
+  --report report.html
 ```
 
 ---
