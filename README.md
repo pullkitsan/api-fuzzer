@@ -54,7 +54,7 @@ python api_fuzzer.py --swagger-file openapi.json --base-url http://localhost:500
 
 ```bash
 python api_fuzzer.py \
-  --url http://localhost:5000/api/users/userId \
+  --url 'http://localhost:5000/api/users/userId' \
   --method POST \
   --body '{"username": "<<FUZZ_username>>", "email": “<<FUZZ_email>>”}' \
   --params username,email \
