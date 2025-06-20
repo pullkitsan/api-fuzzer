@@ -1,0 +1,6 @@
+requests
+rich
+jinja2
+pyyaml
+openapi-spec-validator
+flask
