@@ -57,7 +57,7 @@ python3 api_fuzzer.py \
   --url http://localhost:5000/api/users/userId \
   --method POST \
   --body '{"username": "<<FUZZ_username>>", "email": “<<FUZZ_email>>”}' \
-  --params userId,email \
+  --params username,email \
   --combo \
   --wordlist list.txt \
   --proxy http://127.0.0.1:8080 \
