@@ -104,7 +104,7 @@ python3 api_fuzzer.py \
 Install dependencies via:
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 ---
 
