@@ -33,7 +33,7 @@ cd api-fuzzer
 Install Python dependencies with:
 
 ```bash
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ### 3. Run the Tool
@@ -41,19 +41,19 @@ pip3 install -r requirements.txt
 #### Swagger-based Interactive Flow
 
 ```bash
-python3 api_fuzzer.py --swagger-file openapi.json --base-url http://localhost:5000
+python api_fuzzer.py --swagger-file openapi.json --base-url http://localhost:5000
 ```
 
 #### Dry run - Shows the parsed endpoints from api spec file 
 
 ```bash
-python3 api_fuzzer.py --swagger-file openapi.json --base-url http://localhost:5000 --dry-run
+python api_fuzzer.py --swagger-file openapi.json --base-url http://localhost:5000 --dry-run
 ```
 
 #### CLI Manual Mode
 
 ```bash
-python3 api_fuzzer.py \
+python api_fuzzer.py \
   --url http://localhost:5000/api/users/userId \
   --method POST \
   --body '{"username": "<<FUZZ_username>>", "email": “<<FUZZ_email>>”}' \
@@ -67,7 +67,7 @@ python3 api_fuzzer.py \
 #### CLI Swagger Mode
 
 ```bash
-python3 api_fuzzer.py \
+python api_fuzzer.py \
   --base-url http://localhost:5000 \
   --swagger-file <API_SPEC_FILE> \
   --report <REPORT_NAME> \
@@ -104,7 +104,7 @@ python3 api_fuzzer.py \
 Install dependencies via:
 
 ```bash
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 ```
 ---
 
