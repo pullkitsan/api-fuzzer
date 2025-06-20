@@ -44,7 +44,7 @@ pip3 install -r requirements.txt
 python3 api_fuzzer.py --swagger-file openapi.json --base-url http://localhost:5000
 ```
 
-### Dry run - Shows the parsed endpoints from api spec file 
+#### Dry run - Shows the parsed endpoints from api spec file 
 
 ```bash
 python3 api_fuzzer.py --swagger-file openapi.json --base-url http://localhost:5000 --dry-run
