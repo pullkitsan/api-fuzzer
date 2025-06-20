@@ -4,3 +4,4 @@ jinja2
 pyyaml
 openapi-spec-validator
 flask
+deepdiff
