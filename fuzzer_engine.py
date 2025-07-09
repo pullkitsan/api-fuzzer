@@ -8,6 +8,7 @@ from rich import print
 from report_generator import generate_html_report
 from request_utils import prepare_and_send_request
 import re
+import json
 #from file_fuzzer import run_file_fuzzer
 
 
@@ -27,8 +28,6 @@ def run_fuzzer(args, param_list):
         print("[yellow][!] Multiple parameters specified. Use --combo for multi-param fuzzing.[/yellow]")
         sys.exit(1)
 
-
-
     #Regexing
     include_regex = args.include_regex if hasattr(args, "include_regex") else None
 
@@ -41,6 +40,14 @@ def run_fuzzer(args, param_list):
         payloads = [line.strip() for line in f if line.strip()]
 
     headers = {"Content-Type": "application/json"}
+
+    if args.headers:
+        try:
+            custom_headers = json.loads(args.headers)
+            headers.update(custom_headers)
+        except json.JSONDecodeError:
+            print("[red][!] Failed to parse headers JSON. Make sure it's valid.[/red]")
+            return
 
     if hasattr(args, "auth_header") and args.auth_header:
         headers["Authorization"] = args.auth_header
