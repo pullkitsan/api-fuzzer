@@ -64,6 +64,21 @@ python api_fuzzer.py \
   --report report.html
 ```
 
+#### CLI Manual Mode with Custom Headers
+
+```bash
+python api_fuzzer.py \
+  --url 'http://localhost:5000/api/users/userId' \
+  --method POST \
+  --body '{"username": "<<FUZZ_username>>", "email": “<<FUZZ_email>>”}' \
+  --params username,email \
+  --combo \
+  --wordlist list.txt \
+  --headers '{"Authorization": "Bearer abc123", "X-Env": "staging"}' \
+  --proxy http://127.0.0.1:8080 \
+  --report report.html
+```
+
 #### CLI Swagger Mode
 
 ```bash
