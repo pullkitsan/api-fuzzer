@@ -37,6 +37,8 @@ def main():
     parser.add_argument("--report", help="Path to HTML report output (e.g. results/report.html)")
     parser.add_argument("--auth-header", help="Authorization header value (e.g. 'Bearer <token>')")
     parser.add_argument("--include-regex", help="Regex pattern to match in response body before displaying/saving")
+    parser.add_argument("--headers",help="Custom headers as JSON string, e.g. '{\"Authorization\": \"Bearer xyz\", \"X-API-Key\": \"abc\"}'")
+
 
     args = parser.parse_args()
 
