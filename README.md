@@ -134,6 +134,17 @@ The tool generates a clean HTML report that shows:
 
 ---
 
+## GUI mode 
+
+```bash
+python api_fuzzer_gui.py 
+```
+
+
+https://github.com/user-attachments/assets/52411f20-a112-4d39-93bb-9e4d4a93de9a
+
+
+
 ## ✅ TODO / Roadmap
 
 - [x] Proxy routing
